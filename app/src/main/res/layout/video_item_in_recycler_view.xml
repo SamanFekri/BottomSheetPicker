@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingEnd="2.5dp"
+        android:paddingStart="2.5dp"
+        android:paddingTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/video_item_recycler_view_preview_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="centerCrop" />
+
+        <CheckBox
+            android:id="@+id/checkbox_recycler_picker_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/video_item_recycler_view_preview_image"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <RelativeLayout
+            android:id="@+id/bottom_line_video_item_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@id/video_item_recycler_view_preview_image"
+            android:background="#77000000">
+
+            <ImageView
+                android:id="@+id/camera_imageview_video_item"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/presence_video_online" />
+
+            <TextView
+                android:id="@+id/textview_video_duration_item"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/camera_imageview_video_item"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
